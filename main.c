@@ -7,7 +7,8 @@ char str[]="Hello World";
 char *ptr;
 ptr=str;
 volatile char *video = (volatile char*)0xB8000;
-while(*ptr!=0){
+int i=0;
+for(i=0;i<sizeof(str);i++){
 *video++=*ptr++;
 *video++ = 0x1B;
 //*video++=25;

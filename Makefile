@@ -11,7 +11,7 @@ all: kernel grub.img
 	sudo umount mnt
 	sudo kpartx -d grub.img
 
-kernel: main.o
+kernel: boot.o main.o
 	ld $(LDFLAGS) -o kernel $^
 
 boot.o: boot.s

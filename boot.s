@@ -14,7 +14,7 @@ MBOOT_CHECKSUM      equ -(MBOOT_HEADER_MAGIC + MBOOT_HEADER_FLAGS)
 
 mboot:
                                ; embedding constants in the code:
-	dd  0x0000000              ; TODO: fill in the correct value!
+	dd  MBOOT_HEADER_MAGIC              ; TODO: fill in the correct value!
 	dd  MBOOT_HEADER_FLAGS     ; tell grub what your file is
 	dd  MBOOT_CHECKSUM         ; verify checksum
 
